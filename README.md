@@ -2,7 +2,7 @@
 
 This is the internal working pack for the August 2026 member newsletter.
 
-The live hub links to one draft for each of the 31 industries with an accepted-offer hire in August. Each draft uses the same conversion path:
+The live hub links to six newsletter drafts. Each draft groups industries with a similar operating model, buyer, or hiring pattern. Each draft uses the same conversion path:
 
 1. Show the hiring activity in the member's own industry.
 2. Show the relevant AI builds that shipped in August.
@@ -30,7 +30,7 @@ The source confirms whether an intro video exists. A video is linked only when t
 ## Project files
 
 - `index.html`: internal hub.
-- `industries/*/index.html`: 31 industry drafts.
+- `clusters/*/index.html`: 6 grouped industry drafts.
 - `assets/styles.css`: shared design system.
 - `data/august-2026.json`: normalized source data.
 - `data/august-2026-enriched.json`: conservative local candidate-profile enrichment.
@@ -51,3 +51,12 @@ The committed enriched data is the reviewed input. Do not replace it without che
 Qualified hiring requests created within 30 days of a send.
 
 Track placement revenue, AI build revenue, GPD adoption, and hire-plus-build combinations as supporting measures.
+
+## Newsletter groups
+
+- Home & Field Services — 27 hires.
+- Consumer, Sports & Hospitality — 14 hires.
+- Property, Construction & Engineering — 12 hires.
+- Finance & Business Services — 10 hires.
+- Health, Wellness & Care — 9 hires.
+- Logistics & Industrial Operations — 5 hires.

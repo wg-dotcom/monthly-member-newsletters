@@ -14,7 +14,53 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent
 DATA_PATH = ROOT / "data" / "august-2026-enriched.json"
 ASSETS = ROOT / "assets"
-INDUSTRIES = ROOT / "industries"
+CLUSTER_DIR = ROOT / "clusters"
+
+CLUSTERS = {
+    "Home & Field Services": [
+        "Cleaning Services",
+        "Environmental Services",
+        "HVAC",
+        "Home Improvement",
+        "Home Services",
+        "Home Services & Trades",
+        "Landscaping",
+        "Plumbing",
+    ],
+    "Property, Construction & Engineering": [
+        "Commercial Real Estate",
+        "Construction",
+        "Construction & Engineering",
+        "Real Estate",
+        "Residential",
+    ],
+    "Finance & Business Services": [
+        "Accounting",
+        "Financial Services",
+        "IT Services",
+        "Marketing",
+        "Professional Services",
+        "Venture Capital",
+    ],
+    "Health, Wellness & Care": [
+        "Fitness",
+        "Healthcare",
+        "Mental Healthcare",
+        "Personal Care",
+    ],
+    "Consumer, Sports & Hospitality": [
+        "Consumer Services",
+        "Food & Beverage",
+        "Food & Hospitality",
+        "Sports",
+    ],
+    "Logistics & Industrial Operations": [
+        "Equipment",
+        "Renewable Energy",
+        "Transportation",
+        "Trucking",
+    ],
+}
 
 
 def esc(value: object) -> str:
@@ -110,6 +156,7 @@ NEXT_MOVES = {
     "it": ("Add an operator who owns the queue", "Pair the role with triage and status-summary automation so experts stay on higher-value work."),
     "land": ("Add a service coordinator", "Pair the role with estimate follow-up and customer-response automation."),
     "environment": ("Add the next operator before volume breaks the process", "Pair the role with intake, QA, and reporting automation."),
+    "logistics": ("Add an operations coordinator who owns the handoffs", "Pair the role with dispatch, tracking, and exception-summary automation."),
     "default": ("Add the operator your team keeps covering for", "Pair the role with one focused AI build that removes the repetitive work around it."),
 }
 
@@ -143,17 +190,17 @@ def render_candidate(hire: dict) -> str:
 </article>"""
 
 
-def render_industry_page(industry: str, hires: list[dict], ai_builds: list[dict], global_stats: dict) -> str:
+def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list[dict], ai_builds: list[dict], global_stats: dict) -> str:
     count = len(hires)
     companies = defaultdict(list)
     for hire in hires:
         companies[str(hire.get("company_name") or "Member company")].append(hire)
     gtc_count = sum(h.get("is_gtc") == "Yes" for h in hires)
     videos = sum(h.get("has_intro_video") == "Yes" for h in hires)
-    related = [b for b in ai_builds if industry in classify_ai_build(b)]
-    hire_action, build_action = recommendation(industry)
-    subject = quote(f"August hiring request — {industry}")
-    preview = f"{count} {industry} {singular(str(count))} moved in August. See what members are building next."
+    related = [b for b in ai_builds if classify_ai_build(b).intersection(cluster_industries)]
+    hire_action, build_action = recommendation(cluster)
+    subject = quote(f"August hiring request — {cluster}")
+    preview = f"{count} hires across {cluster} moved in August. See what members are building next."
 
     company_blocks = []
     for company, company_hires in sorted(companies.items(), key=lambda item: (-len(item[1]), item[0].lower())):
@@ -179,24 +226,30 @@ def render_industry_page(industry: str, hires: list[dict], ai_builds: list[dict]
     else:
         builds_markup = f"""<article class="build-card open-lane">
   <span class="build-label">THE OPEN LANE</span>
-  <h3>No {esc(industry)} member shipped an AI build in August.</h3>
+  <h3>No member in {esc(cluster)} shipped an AI build in August.</h3>
   <p>That makes the first useful build in this segment easier to notice.</p>
 </article>"""
         build_heading = "The white space is still open."
-        build_intro = f"Ten customer AI builds shipped across Sagan in August. None came from {esc(industry)}. Yet."
+        build_intro = f"Ten customer AI builds shipped across Sagan in August. None came from {esc(cluster)}. Yet."
 
     gtc_note = f"{gtc_count} came through GTC." if gtc_count else "The next GTC hire in this segment is still open."
     company_word = "company" if len(companies) == 1 else "companies"
     hiring_mail = f"mailto:?subject={subject}&body=I%20want%20to%20open%20a%20hiring%20request%20for%20my%20team."
 
-    return f"""{page_head(f'{industry} — August Member Brief', preview, '../../')}
+    industry_counts = Counter(h.get("industry_primary") for h in hires)
+    industry_tags = "".join(
+        f'<span>{esc(name)} <strong>{industry_counts.get(name, 0)}</strong></span>'
+        for name in cluster_industries
+    )
+
+    return f"""{page_head(f'{cluster} — August Member Brief', preview, '../../')}
 <body>
 <div class="page-shell">
 {site_header('../../')}
 <main>
   <section class="hero industry-hero">
-    <div class="eyebrow">AUGUST SIGNAL / {esc(industry).upper()}</div>
-    <h1>The role your team keeps covering after hours? <span>{count} {esc(industry)} {singular(str(count))}</span> moved in August.</h1>
+    <div class="eyebrow">AUGUST SIGNAL / {esc(cluster).upper()}</div>
+    <h1>The role your team keeps covering after hours? <span>{count} hires</span> moved across {esc(cluster)} in August.</h1>
     <p class="hero-copy">Other members stopped waiting for the perfect time. They added capacity, kept the work moving, and gave themselves room to grow.</p>
     <div class="hero-actions">
       <a class="button primary" href="{hiring_mail}">Open a hiring request <span aria-hidden="true">↗</span></a>
@@ -205,10 +258,15 @@ def render_industry_page(industry: str, hires: list[dict], ai_builds: list[dict]
   </section>
 
   <section class="proof-strip" aria-label="August industry proof">
-    <div><strong>{count}</strong><span>{esc(industry)} {singular(str(count))}</span></div>
+    <div><strong>{count}</strong><span>accepted offers</span></div>
     <div><strong>{len(companies)}</strong><span>member {company_word}</span></div>
     <div><strong>{videos}</strong><span>intro videos ready</span></div>
     <div><strong>{gtc_count}</strong><span>GTC {singular(str(gtc_count))}</span></div>
+  </section>
+
+  <section class="cluster-scope" aria-label="Industries in this newsletter">
+    <span class="cluster-label">INDUSTRIES IN THIS BRIEF</span>
+    <div class="cluster-tags">{industry_tags}</div>
   </section>
 
   <section class="section" id="peer-moves">
@@ -273,16 +331,19 @@ def render_industry_page(industry: str, hires: list[dict], ai_builds: list[dict]
 """
 
 
-def render_hub(industry_map: dict[str, list[dict]], ai_builds: list[dict], stats: dict, data: dict) -> str:
+def render_hub(cluster_map: dict[str, list[dict]], ai_builds: list[dict], stats: dict, data: dict) -> str:
     cards = []
-    for industry, hires in sorted(industry_map.items(), key=lambda item: (-len(item[1]), item[0].lower())):
+    for cluster, hires in sorted(cluster_map.items(), key=lambda item: (-len(item[1]), item[0].lower())):
         companies = len({h.get("company_name") for h in hires})
         gtc = sum(h.get("is_gtc") == "Yes" for h in hires)
-        related = sum(industry in classify_ai_build(b) for b in ai_builds)
-        cards.append(f"""<a class="industry-card" href="industries/{slugify(industry)}/index.html">
-  <div class="industry-card-top"><span>{esc(industry)}</span><b aria-hidden="true">↗</b></div>
+        cluster_industries = CLUSTERS[cluster]
+        related = sum(bool(classify_ai_build(b).intersection(cluster_industries)) for b in ai_builds)
+        coverage = " · ".join(cluster_industries)
+        cards.append(f"""<a class="industry-card" href="clusters/{slugify(cluster)}/index.html">
+  <div class="industry-card-top"><span>{esc(cluster)}</span><b aria-hidden="true">↗</b></div>
   <strong>{len(hires)}</strong>
   <p>{singular(str(len(hires)))} · {companies} {'company' if companies == 1 else 'companies'}</p>
+  <small>{esc(coverage)}</small>
   <div class="industry-tags"><span>{gtc} GTC</span><span>{related} relevant AI</span></div>
 </a>""")
 
@@ -292,15 +353,15 @@ def render_hub(industry_map: dict[str, list[dict]], ai_builds: list[dict], stats
         for label, url in sources.items()
     )
 
-    return f"""{page_head('August 2026 Member Newsletter Drafts', 'Thirty-one industry newsletter drafts built from August member hiring and AI activity.')}
+    return f"""{page_head('August 2026 Member Newsletter Drafts', 'Six member newsletter drafts grouped by similar industries and built from August hiring and AI activity.')}
 <body>
 <div class="page-shell">
 {site_header()}
 <main>
   <section class="hero hub-hero">
     <div class="eyebrow">TEAM WORKING PACK / MC-250</div>
-    <h1>Members made <span>77 hires</span> in August. This pack makes the next request hard to ignore.</h1>
-    <p class="hero-copy">Thirty-one industry drafts. Real member activity. Strong pressure without invented claims.</p>
+    <h1>Members made <span>77 hires</span> in August. Six focused newsletters make the next request hard to ignore.</h1>
+    <p class="hero-copy">Similar industries now share one stronger story. Real member activity. Strong pressure without invented claims.</p>
     <div class="hero-actions">
       <a class="button primary" href="#industries">Browse industry drafts</a>
       <a class="text-link" href="#editorial">See the editorial logic</a>
@@ -316,8 +377,8 @@ def render_hub(industry_map: dict[str, list[dict]], ai_builds: list[dict], stats
 
   <section class="section" id="industries">
     <div class="section-heading two-col-heading">
-      <div><span class="kicker">31 INDUSTRIES</span><h2>Pick the member’s world.</h2></div>
-      <p>Each page uses the same conversion structure. The proof and the recommendation change with the industry.</p>
+      <div><span class="kicker">6 MEMBER GROUPS</span><h2>Pick the member’s world.</h2></div>
+      <p>Each page is a complete newsletter. The peer proof, AI builds, and recommendation change with the group.</p>
     </div>
     <div class="industry-grid">{''.join(cards)}</div>
   </section>
@@ -354,9 +415,10 @@ def render_hub(industry_map: dict[str, list[dict]], ai_builds: list[dict], stats
 STYLES = r"""
 :root{--cream:#F5F2ED;--paper:#FCFAF6;--glacier:#093A3E;--glacier-2:#15545A;--yellow:#F5B800;--blue:#2197FF;--ink:#10292C;--muted:#617174;--line:rgba(9,58,62,.18);--white:#fff;--radius:24px;--mono:'Fragment Mono',monospace;--display:'Plus Jakarta Sans',sans-serif;--body:'Space Grotesk',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.55}.page-shell{max-width:1500px;margin:0 auto;overflow:hidden}.site-header{height:88px;padding:0 clamp(24px,5vw,72px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;color:var(--glacier);font-family:var(--display);font-weight:800;letter-spacing:.12em;text-decoration:none}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--glacier);color:var(--yellow);letter-spacing:0}.header-right{display:flex;gap:12px;align-items:center}.draft-chip,.period,.eyebrow,.kicker,.build-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}.draft-chip{padding:7px 11px;border:1px solid var(--line);border-radius:999px}.period{color:var(--muted)}main{padding:0 clamp(24px,5vw,72px)}.hero{padding:clamp(72px,10vw,150px) 0 80px;max-width:1240px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--glacier);font-weight:600}.eyebrow:before{content:"";width:24px;height:3px;border-radius:3px;background:var(--yellow)}h1,h2,h3,h4{font-family:var(--display);margin:0;color:var(--glacier);line-height:1.05}h1{font-size:clamp(44px,7.2vw,108px);letter-spacing:-.055em;max-width:1280px;margin-top:24px}h1 span{color:var(--glacier);box-shadow:inset 0 -.18em 0 var(--yellow)}h2{font-size:clamp(36px,4.6vw,68px);letter-spacing:-.04em}.hero-copy{font-size:clamp(18px,2vw,25px);max-width:760px;color:var(--muted);margin:30px 0 0}.hero-actions{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:40px}.button{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:15px 24px;border-radius:999px;font-family:var(--display);font-weight:700;text-decoration:none;transition:transform .18s ease,background .18s ease}.button:hover{transform:translateY(-2px)}.button.primary{background:var(--yellow);color:var(--glacier)}.button.large{padding:19px 30px}.text-link{color:var(--glacier);font-weight:600;text-underline-offset:5px}.proof-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);overflow:hidden}.proof-strip div{padding:34px;border-right:1px solid var(--line)}.proof-strip div:last-child{border:0}.proof-strip strong{display:block;font:clamp(38px,5vw,68px)/1 var(--mono);letter-spacing:-.06em;color:var(--glacier)}.proof-strip span{display:block;margin-top:12px;color:var(--muted)}.section{padding:clamp(80px,10vw,140px) 0;border-bottom:1px solid var(--line)}.section-heading{max-width:900px;margin-bottom:50px}.section-heading h2{margin-top:14px}.two-col-heading{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);max-width:none;gap:70px;align-items:end}.two-col-heading p{margin:0;color:var(--muted);font-size:18px}.kicker{font-weight:600;color:var(--glacier)}.kicker.light{color:var(--yellow)}.company-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.company-block{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px}.company-heading{display:flex;justify-content:space-between;gap:18px;align-items:start;padding-bottom:22px;border-bottom:1px solid var(--line)}.company-heading h3{font-size:23px;line-height:1.25}.company-heading span{font:12px var(--mono);white-space:nowrap;color:var(--muted)}.candidate-list{display:grid}.candidate-card{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:15px;padding:19px 0;border-bottom:1px solid var(--line)}.candidate-card:last-child{border:0;padding-bottom:0}.avatar{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--glacier);color:var(--yellow);font-family:var(--display);font-weight:800}.candidate-title{display:flex;gap:8px;align-items:center}.candidate-title h4{font-size:17px}.candidate-copy p{margin:4px 0 0;color:var(--muted);font-size:14px}.mini-tag{font:9px var(--mono);padding:3px 6px;border-radius:999px}.mini-tag.dark{background:var(--glacier);color:var(--white)}.video-link,.video-ready,.video-missing{font:11px var(--mono);white-space:nowrap}.video-link{color:var(--glacier);text-underline-offset:4px}.video-ready{color:var(--glacier)}.video-ready:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--blue);margin-right:7px}.video-missing{color:#945f32}.data-note{font-size:13px;color:var(--muted);margin:22px 4px 0}.ai-section{background:var(--paper);margin-left:calc(clamp(24px,5vw,72px) * -1);margin-right:calc(clamp(24px,5vw,72px) * -1);padding-left:clamp(24px,5vw,72px);padding-right:clamp(24px,5vw,72px)}.build-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.build-card{min-height:220px;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--cream)}.build-card.open-lane{grid-column:1/-1;min-height:260px;background:var(--glacier);border-color:var(--glacier)}.build-card h3{font-size:clamp(26px,3vw,42px);margin-top:48px}.build-card p{color:var(--muted);margin:10px 0 0}.build-card.open-lane h3,.build-card.open-lane p{color:var(--white)}.build-label{color:var(--glacier)}.open-lane .build-label{color:var(--yellow)}.benchmark-line{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:22px;font-size:14px}.benchmark-line strong{font-family:var(--mono);color:var(--glacier)}.benchmark-line span{color:var(--muted)}.pairing-section{display:grid;grid-template-columns:110px .7fr 1.3fr;gap:40px;align-items:start}.pairing-number{font:62px/1 var(--mono);color:var(--yellow)}.pairing-copy h2{font-size:clamp(34px,4vw,58px);margin:12px 0 22px}.pairing-copy p{color:var(--muted);font-size:18px}.pairing-actions{display:grid;grid-template-columns:1fr 48px 1fr;align-items:stretch}.pairing-actions article{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}.pairing-actions article span{font:11px var(--mono);color:var(--muted)}.pairing-actions article h3{font-size:21px;line-height:1.3;margin-top:24px}.plus{display:grid;place-items:center;font:30px var(--mono);color:var(--glacier)}.gpd-section{display:grid;grid-template-columns:.55fr 1.45fr;gap:70px;padding-left:clamp(28px,5vw,70px);padding-right:clamp(28px,5vw,70px);background:var(--glacier);border:0;border-radius:var(--radius);margin-top:clamp(80px,10vw,140px)}.gpd-stat{display:flex;flex-direction:column;justify-content:center}.gpd-stat strong{font:clamp(88px,12vw,180px)/.85 var(--mono);letter-spacing:-.08em;color:var(--yellow)}.gpd-stat span{color:var(--white);margin-top:18px}.gpd-copy h2{color:var(--white);margin:14px 0 26px}.gpd-copy p{font-size:19px;color:#d7e5e3;max-width:700px}.gpd-copy .fine{font-size:14px;color:#abc2bf}.final-cta{text-align:center;padding:clamp(100px,12vw,170px) 0}.final-cta h2{max-width:980px;margin:18px auto}.final-cta p{max-width:700px;margin:25px auto 34px;color:var(--muted);font-size:19px}.site-footer{display:flex;justify-content:space-between;gap:40px;align-items:end;padding:45px clamp(24px,5vw,72px);background:var(--glacier);color:var(--white)}.site-footer strong{font-family:var(--display)}.site-footer p{max-width:660px;margin:8px 0 0;color:#abc2bf;font-size:13px}.site-footer a{color:var(--yellow);font-weight:600}.industry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.industry-card{display:block;min-height:245px;padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);color:inherit;text-decoration:none;transition:background .18s ease,transform .18s ease}.industry-card:hover{background:var(--white);transform:translateY(-3px)}.industry-card-top{display:flex;justify-content:space-between;gap:16px;color:var(--glacier);font-weight:600}.industry-card>strong{display:block;font:62px/1 var(--mono);letter-spacing:-.07em;color:var(--glacier);margin-top:38px}.industry-card>p{color:var(--muted);margin:8px 0 24px}.industry-tags{display:flex;gap:8px;flex-wrap:wrap}.industry-tags span{font:10px var(--mono);padding:6px 9px;border:1px solid var(--line);border-radius:999px}.editorial{background:var(--paper);margin-left:calc(clamp(24px,5vw,72px) * -1);margin-right:calc(clamp(24px,5vw,72px) * -1);padding-left:clamp(24px,5vw,72px);padding-right:clamp(24px,5vw,72px)}.logic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.logic-grid article{padding:28px;border-top:3px solid var(--yellow);background:var(--cream);border-radius:0 0 var(--radius) var(--radius)}.logic-grid article>span{font:34px var(--mono);color:var(--glacier)}.logic-grid h3{font-size:21px;margin:30px 0 12px}.logic-grid p{color:var(--muted);margin:0}.data-room{display:grid;grid-template-columns:1fr .75fr;gap:50px}.data-room h2{margin:14px 0 22px}.data-room p{color:var(--muted)}.source-links{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper)}.source-links a{display:flex;justify-content:space-between;padding:18px 22px;color:var(--glacier);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}.source-links a:last-child{border:0}.caveat-box{grid-column:1/-1;padding:22px;border-left:4px solid var(--yellow);background:var(--paper)}.caveat-box p{margin:5px 0 0}.hub-hero{max-width:1300px}
+.industry-card small{display:block;min-height:58px;margin:-12px 0 22px;color:var(--muted);font-size:12px;line-height:1.45}.cluster-scope{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start;padding:26px 4px 0}.cluster-label{font:11px var(--mono);letter-spacing:.1em;color:var(--muted)}.cluster-tags{display:flex;gap:8px;flex-wrap:wrap}.cluster-tags span{font-size:13px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}.cluster-tags strong{font-family:var(--mono);margin-left:5px;color:var(--glacier)}
 .ai-section,.editorial{margin-left:clamp(-72px,-5vw,-24px);margin-right:clamp(-72px,-5vw,-24px)}
 @media(max-width:900px){.proof-strip{grid-template-columns:repeat(2,1fr)}.proof-strip div:nth-child(2){border-right:0}.proof-strip div:nth-child(-n+2){border-bottom:1px solid var(--line)}.two-col-heading,.pairing-section,.gpd-section,.data-room{grid-template-columns:1fr}.company-grid,.build-grid,.industry-grid{grid-template-columns:1fr 1fr}.pairing-number{display:none}.gpd-section{gap:35px}.gpd-stat strong{font-size:100px}.logic-grid{grid-template-columns:1fr}.site-footer{align-items:start}}
-@media(max-width:620px){.site-header{height:76px}.draft-chip{display:none}.hero{padding-top:66px}h1{font-size:44px}.proof-strip{grid-template-columns:1fr 1fr}.proof-strip div{padding:23px}.proof-strip strong{font-size:39px}.proof-strip span{font-size:13px}.company-grid,.build-grid,.industry-grid{grid-template-columns:1fr}.candidate-card{grid-template-columns:42px 1fr}.candidate-card>.video-link,.candidate-card>.video-ready,.candidate-card>.video-missing{grid-column:2}.pairing-actions{grid-template-columns:1fr}.plus{height:46px}.site-footer{flex-direction:column}.header-right{gap:0}.company-block{padding:22px}.gpd-section{border-radius:18px}.industry-card{min-height:220px}}
+@media(max-width:620px){.site-header{height:76px}.draft-chip{display:none}.hero{padding-top:66px}h1{font-size:44px}.proof-strip{grid-template-columns:1fr 1fr}.proof-strip div{padding:23px}.proof-strip strong{font-size:39px}.proof-strip span{font-size:13px}.company-grid,.build-grid,.industry-grid{grid-template-columns:1fr}.candidate-card{grid-template-columns:42px 1fr}.candidate-card>.video-link,.candidate-card>.video-ready,.candidate-card>.video-missing{grid-column:2}.pairing-actions{grid-template-columns:1fr}.plus{height:46px}.site-footer{flex-direction:column}.header-right{gap:0}.company-block{padding:22px}.gpd-section{border-radius:18px}.industry-card{min-height:220px}.cluster-scope{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.industry-card{transition:none}}
 """
 
@@ -365,9 +427,22 @@ def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     active_hires = [h for h in data["hires"] if h.get("customer_type") == "Active Member"]
     ai_builds = [b for b in data["ai_builds"] if b.get("include_in_customer_count") == "Yes"]
-    industry_map: dict[str, list[dict]] = defaultdict(list)
+    cluster_map: dict[str, list[dict]] = defaultdict(list)
+    industry_to_cluster = {
+        industry: cluster
+        for cluster, industries in CLUSTERS.items()
+        for industry in industries
+    }
+    ungrouped = []
     for hire in active_hires:
-        industry_map[str(hire["industry_primary"])].append(hire)
+        industry = str(hire["industry_primary"])
+        cluster = industry_to_cluster.get(industry)
+        if not cluster:
+            ungrouped.append(industry)
+            continue
+        cluster_map[cluster].append(hire)
+    if ungrouped:
+        raise ValueError(f"Ungrouped industries: {sorted(set(ungrouped))}")
 
     stats = {
         "hires": len(active_hires),
@@ -377,15 +452,18 @@ def main() -> None:
     }
 
     ASSETS.mkdir(parents=True, exist_ok=True)
-    INDUSTRIES.mkdir(parents=True, exist_ok=True)
+    CLUSTER_DIR.mkdir(parents=True, exist_ok=True)
     (ASSETS / "styles.css").write_text(STYLES.strip() + "\n", encoding="utf-8")
-    (ROOT / "index.html").write_text(render_hub(industry_map, ai_builds, stats, data), encoding="utf-8")
-    for industry, hires in industry_map.items():
-        output = INDUSTRIES / slugify(industry)
+    (ROOT / "index.html").write_text(render_hub(cluster_map, ai_builds, stats, data), encoding="utf-8")
+    for cluster, hires in cluster_map.items():
+        output = CLUSTER_DIR / slugify(cluster)
         output.mkdir(parents=True, exist_ok=True)
-        (output / "index.html").write_text(render_industry_page(industry, hires, ai_builds, stats), encoding="utf-8")
+        (output / "index.html").write_text(
+            render_cluster_page(cluster, CLUSTERS[cluster], hires, ai_builds, stats),
+            encoding="utf-8",
+        )
     (ROOT / ".nojekyll").write_text("", encoding="utf-8")
-    print(json.dumps({"industry_pages": len(industry_map), "stats": stats}, indent=2))
+    print(json.dumps({"cluster_pages": len(cluster_map), "cluster_hires": {k: len(v) for k, v in cluster_map.items()}, "stats": stats}, indent=2))
 
 
 if __name__ == "__main__":
