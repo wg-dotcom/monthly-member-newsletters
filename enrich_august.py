@@ -109,6 +109,31 @@ VIDEO_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
 }
 
 
+# Monthly compensation verified from candidate-specific placement-fee records.
+# CORE invoices charge 18% of first-year compensation, so the agreed monthly
+# salary is the recorded fee divided by 18% and then by 12. Natalia's amount is
+# confirmed directly in the White Glove Tracker because her placement invoice
+# predates the August commission ledger.
+AGREED_SALARY_OVERRIDES: dict[tuple[str, str], int] = {
+    ("ana sofia v", "global beer network"): 3300,
+    ("viridiana t", "molloy roofing company"): 2000,
+    ("yarel c", "ledezma remodeling"): 1800,
+    ("carlos v", "rubicon"): 2000,
+    ("fernando r", "rubicon"): 2000,
+    ("andrea martinez", "rubicon"): 1500,
+    ("jose z", "rubicon"): 2000,
+    ("samuel garrido", "rubicon"): 1500,
+    ("jovanne z", "bonded"): 2000,
+    ("alanna voigt", "victory sprinkler"): 1500,
+    ("rhona cuenca", "stack growth solutions"): 2000,
+    ("moleboheng mokhothu", "everbearing services"): 2000,
+    ("mei fu", "your ohio home buyer"): 1700,
+    ("joaquin e", "peak power"): 1600,
+    ("fernanda padilla", "divi"): 4500,
+    ("natalia e", "riverbend landscapes tree service"): 1900,
+}
+
+
 def normalize(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode().lower()
@@ -140,12 +165,18 @@ def main() -> None:
 
     matched = 0
     matched_with_video = 0
+    verified_agreed_salaries = 0
     for hire in data["hires"]:
         if hire.get("customer_type") != "Active Member":
             continue
 
         target = normalize(hire.get("candidate_name", ""))
         company = normalize(hire.get("company_name", ""))
+        agreed_salary = AGREED_SALARY_OVERRIDES.get((target, company))
+        if agreed_salary:
+            hire["agreed_monthly_salary"] = agreed_salary
+            hire["agreed_salary_source"] = "candidate-specific CORE placement-fee record"
+            verified_agreed_salaries += 1
         override = VIDEO_OVERRIDES.get((target, company))
         if override:
             hire.update(
@@ -211,8 +242,10 @@ def main() -> None:
         "active_member_hires": sum(h.get("customer_type") == "Active Member" for h in data["hires"]),
         "candidate_profiles_matched": matched,
         "matched_profiles_with_video_url": matched_with_video,
+        "hires_with_verified_agreed_salary": verified_agreed_salaries,
         "method": "Verified CORE/GTC/presentation links first, then exact or unique conservative name matching against the local candidate mirror. Unresolved records stay unresolved.",
     }
+    data.setdefault("sources", {})["agreed_salary_verification"] = "https://docs.google.com/spreadsheets/d/12U6T1i73UXVE-fgYN4SU7GZBaBQ9eaxsVJUPQVzZ_R8/edit"
     OUTPUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(
         f"Wrote {OUTPUT.name}: {matched} candidate profiles matched, "
