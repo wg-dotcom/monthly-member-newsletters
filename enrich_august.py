@@ -36,6 +36,11 @@ VIDEO_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
         "role_title": "Regional Sourcing Associate",
         "video_url": "https://drive.google.com/file/d/1Opc_-bbzsHyhz81vj1kK6kX4lzNgkk9r/view?usp=drive_link",
     },
+    ("fernando r", "rubicon"): {
+        "candidate_profile_name": "Fernando Martin Rodriguez",
+        "role_title": "Regional Sourcing Associate",
+        "video_url": "https://drive.google.com/file/d/1DuN9C4wFEtIe8C9shzCyO6mOgnFwcwWt/view?usp=drive_link",
+    },
     ("andrea martinez", "rubicon"): {
         "candidate_profile_name": "Andrea M.",
         "role_title": "Training Content Specialist",
@@ -75,6 +80,11 @@ VIDEO_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
         "candidate_profile_name": "Natalia E.",
         "role_title": "Service Coordinator & Dispatcher",
         "video_url": "https://drive.google.com/file/d/1b2GSDmK_9j6viPnmt1d_luwSQtl5Zh-V/view?usp=drive_link",
+    },
+    ("luisa fernanda zapata ramirez", "seattle sustainable landscapes"): {
+        "candidate_profile_name": "Luisa Fernanda Zapata Ramirez",
+        "role_title": "Executive Assistant",
+        "video_url": "https://candidate-video.com/uploads/a1fd0c73-717c-4673-99fa-d5cec6d35004",
     },
     ("fernanda padilla", "divi"): {
         "candidate_profile_name": "Fernanda P.",

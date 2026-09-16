@@ -154,7 +154,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Fernando Martin Rodriguez",
+      "role_title": "Regional Sourcing Associate",
+      "video_url": "https://drive.google.com/file/d/1DuN9C4wFEtIe8C9shzCyO6mOgnFwcwWt/view?usp=drive_link"
     },
     {
       "industry_primary": "Environmental Services",
@@ -756,7 +762,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Luisa Fernanda Zapata Ramirez",
+      "role_title": "Executive Assistant",
+      "video_url": "https://candidate-video.com/uploads/a1fd0c73-717c-4673-99fa-d5cec6d35004"
     },
     {
       "industry_primary": "Marketing",
@@ -2065,8 +2077,8 @@
   ],
   "enrichment": {
     "active_member_hires": 77,
-    "candidate_profiles_matched": 44,
-    "matched_profiles_with_video_url": 39,
+    "candidate_profiles_matched": 46,
+    "matched_profiles_with_video_url": 41,
     "method": "Verified CORE/GTC/presentation links first, then exact or unique conservative name matching against the local candidate mirror. Unresolved records stay unresolved."
   }
 }
