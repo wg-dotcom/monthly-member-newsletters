@@ -1,0 +1,1726 @@
+{
+  "as_of": "2026-09-15",
+  "period": "2026-08",
+  "sources": {
+    "hires": "https://docs.google.com/spreadsheets/d/1HvVR0XGt-AkttZK75tWr-ZrhmsOOH19BySyvHRkV-Og/edit",
+    "ai_builds": "https://docs.google.com/spreadsheets/d/1XolZ0skKpWIvv2kf7_YF9jjIRx4_ngZxqlD3S9DGUeg/edit",
+    "gpd": "https://docs.google.com/spreadsheets/d/14buoH83QlxIL-8Me4qdJRwsi0riY5SFE0VeI12QunFQ/edit",
+    "installments": "https://docs.google.com/spreadsheets/d/1X4SB1bQftnS2zdLwDAZqM0L7h_u4vNmdzJ8mUN44ILI/edit"
+  },
+  "hires": [
+    {
+      "industry_primary": "Accounting",
+      "customer_type": "Active Member",
+      "company_name": "Shack accounting and Consulting",
+      "candidate_name": "Dorcas A.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33555",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Cleaning Services",
+      "customer_type": "Active Member",
+      "company_name": "ServiceMaster by Haven Restoration Group",
+      "candidate_name": "Ukeme Willie",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33789",
+      "offer_accepted_date": "2026-08-26",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Commercial Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Windsor Management Corporation",
+      "candidate_name": "Leslie A.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33296",
+      "offer_accepted_date": "2026-08-26",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Construction",
+      "customer_type": "Active Member",
+      "company_name": "Molloy Roofing Company",
+      "candidate_name": "Viridiana T.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33724",
+      "offer_accepted_date": "2026-08-07",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8239",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Construction & Engineering",
+      "customer_type": "Active Member",
+      "company_name": "Ledezma Remodeling",
+      "candidate_name": "Yarel C.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33658",
+      "offer_accepted_date": "2026-08-06",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Consumer Services",
+      "customer_type": "Active Member",
+      "company_name": "MW Lawn & Landscape",
+      "candidate_name": "Monica Cornejo",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33725",
+      "offer_accepted_date": "2026-08-28",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Carlos V.",
+      "has_intro_video": "Yes",
+      "is_gtc": "Yes",
+      "hr_number": "33472",
+      "offer_accepted_date": "2026-08-01",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "FERNANDO R.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33472",
+      "offer_accepted_date": "2026-08-11",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Andrea Martinez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33618",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Jose Z",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33472",
+      "offer_accepted_date": "2026-08-17",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Samuel Garrido",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33408",
+      "offer_accepted_date": "2026-08-20",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Sadeak Black",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33618",
+      "offer_accepted_date": "2026-08-26",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Abilene Portillo Escarcega",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33396",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Francisco Javier Antuna Mendiola",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33314",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "customer_type": "Active Member",
+      "company_name": "Rubicon",
+      "candidate_name": "Juan José Ruiz Mendoza",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33408",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Equipment",
+      "customer_type": "Active Member",
+      "company_name": "Flamingo Plumbing & Backflow Services",
+      "candidate_name": "Camila Castilla Cardenas",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33690",
+      "offer_accepted_date": "2026-08-20",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Financial Services",
+      "customer_type": "Active Member",
+      "company_name": "EV Partners",
+      "candidate_name": "Flávio Augusto Rosa Viana",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33695",
+      "offer_accepted_date": "2026-08-13",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Financial Services",
+      "customer_type": "Active Member",
+      "company_name": "Stack Growth Solutions",
+      "candidate_name": "Rhona Cuenca",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33745",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Financial Services",
+      "customer_type": "Active Member",
+      "company_name": "Truss One Partners",
+      "candidate_name": "Patience Egbobawaye",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33696",
+      "offer_accepted_date": "2026-08-26",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Fitness",
+      "customer_type": "Active Member",
+      "company_name": "Peak Power",
+      "candidate_name": "Joaquin E.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33559",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Food & Beverage",
+      "customer_type": "Active Member",
+      "company_name": "Office Libations",
+      "candidate_name": "Fabrizia I.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33703",
+      "offer_accepted_date": "2026-08-31",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Food & Hospitality",
+      "customer_type": "Active Member",
+      "company_name": "Global Beer Network",
+      "candidate_name": "Ana Sofía V",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33661",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "HVAC",
+      "customer_type": "Active Member",
+      "company_name": "Mountain Valley Plumbing and HVAC",
+      "candidate_name": "Bathandwa Njobe",
+      "has_intro_video": "No",
+      "is_gtc": "No",
+      "hr_number": "33717",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "HVAC",
+      "customer_type": "Active Member",
+      "company_name": "Mountain Valley Plumbing and HVAC",
+      "candidate_name": "Catherine Baltazar",
+      "has_intro_video": "Yes",
+      "is_gtc": "Yes",
+      "hr_number": "33761",
+      "offer_accepted_date": "2026-08-18",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "HVAC",
+      "customer_type": "Active Member",
+      "company_name": "SwiftPro",
+      "candidate_name": "Carlos Perez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33707",
+      "offer_accepted_date": "2026-08-11",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "HVAC",
+      "customer_type": "Active Member",
+      "company_name": "SwiftPro",
+      "candidate_name": "Rafael Alejandro Perdomo Gutierrez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33707",
+      "offer_accepted_date": "2026-08-11",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "Bonded",
+      "candidate_name": "JOVANNE Z.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33598",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8284",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "DOCS Dermatology",
+      "candidate_name": "Arleth Carbaja",
+      "has_intro_video": "Yes",
+      "is_gtc": "Yes",
+      "hr_number": "33640",
+      "offer_accepted_date": "2026-08-05",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "DOCS Dermatology",
+      "candidate_name": "Kaveri P.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33728",
+      "offer_accepted_date": "2026-08-08",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "Perlmutter Eye Center",
+      "candidate_name": "Natalie D.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33664",
+      "offer_accepted_date": "2026-08-10",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "Sorena Health",
+      "candidate_name": "Simran Singh",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33654",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Home Improvement",
+      "customer_type": "Active Member",
+      "company_name": "West Coast Deck",
+      "candidate_name": "Gabriel De Leon",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33399",
+      "offer_accepted_date": "2026-08-18",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Home Services",
+      "customer_type": "Active Member",
+      "company_name": "Top Notch Windows",
+      "candidate_name": "Maxwel Wakwabubi Wasike",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33665",
+      "offer_accepted_date": "2026-08-18",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Home Services",
+      "customer_type": "Active Member",
+      "company_name": "Town & Country Services",
+      "candidate_name": "Sasha-Lee Riddle",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33600",
+      "offer_accepted_date": "2026-08-04",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Home Services",
+      "customer_type": "Active Member",
+      "company_name": "Town & Country Services",
+      "candidate_name": "Oneilla",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33600",
+      "offer_accepted_date": "2026-08-05",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Home Services & Trades",
+      "customer_type": "Active Member",
+      "company_name": "Victory Sprinkler",
+      "candidate_name": "Alanna Voigt",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33631",
+      "offer_accepted_date": "2026-08-17",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8250",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "IT Services",
+      "customer_type": "Active Member",
+      "company_name": "PCS",
+      "candidate_name": "Carlos Eduardo Centeno Obando",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33635",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "IT Services",
+      "customer_type": "Active Member",
+      "company_name": "PCS",
+      "candidate_name": "Guillermo Antonio Soto Soto",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33635",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "customer_type": "Active Member",
+      "company_name": "Riverbend Landscapes & Tree Service",
+      "candidate_name": "Natalia E.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33341",
+      "offer_accepted_date": "2026-08-06",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "customer_type": "Active Member",
+      "company_name": "Seattle Sustainable Landscapes",
+      "candidate_name": "Grisel Vargas Muñoz",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33614",
+      "offer_accepted_date": "2026-08-07",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "customer_type": "Active Member",
+      "company_name": "Seattle Sustainable Landscapes",
+      "candidate_name": "Anayla Tellez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33615",
+      "offer_accepted_date": "2026-08-18",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "customer_type": "Active Member",
+      "company_name": "Seattle Sustainable Landscapes",
+      "candidate_name": "Luisa Fernanda Zapata Ramirez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33615",
+      "offer_accepted_date": "2026-08-18",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Marketing",
+      "customer_type": "Active Member",
+      "company_name": "Ideal Brides LLC",
+      "candidate_name": "Estefania D.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33578",
+      "offer_accepted_date": "2026-08-14",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Marketing",
+      "customer_type": "Active Member",
+      "company_name": "Ideal Brides LLC",
+      "candidate_name": "Waseem K.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33788",
+      "offer_accepted_date": "2026-08-21",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Mental Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "MyWellbrook Health",
+      "candidate_name": "Julian Lasso Calderon",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33585",
+      "offer_accepted_date": "2026-08-13",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Mental Healthcare",
+      "customer_type": "Active Member",
+      "company_name": "MyWellbrook Health",
+      "candidate_name": "Karissa Garcia",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33530",
+      "offer_accepted_date": "2026-08-31",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Personal Care",
+      "customer_type": "Active Member",
+      "company_name": "Divi",
+      "candidate_name": "Fernanda Padilla",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33617",
+      "offer_accepted_date": "2026-08-12",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8299",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "customer_type": "Active Member",
+      "company_name": "J. Blanton Plumbing",
+      "candidate_name": "Owethu S.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "31959",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "customer_type": "Active Member",
+      "company_name": "J. Blanton Plumbing",
+      "candidate_name": "Fernando Castillo",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33637",
+      "offer_accepted_date": "2026-08-05",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "customer_type": "Active Member",
+      "company_name": "J. Blanton Plumbing",
+      "candidate_name": "Nomfundo hlatshwayo",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33809",
+      "offer_accepted_date": "2026-08-29",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "customer_type": "Active Member",
+      "company_name": "Joe Cole Plumbing",
+      "candidate_name": "Ely Pasadilla",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33663",
+      "offer_accepted_date": "2026-08-13",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Professional Services",
+      "customer_type": "Active Member",
+      "company_name": "Everbearing Services",
+      "candidate_name": "Moleboheng Mokhothu",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33785",
+      "offer_accepted_date": "2026-08-20",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8365",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Cire Equity",
+      "candidate_name": "Sara B.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33734",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Crane",
+      "candidate_name": "Roberto P.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33674",
+      "offer_accepted_date": "2026-08-10",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Crane",
+      "candidate_name": "Jelyn B",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33741",
+      "offer_accepted_date": "2026-08-14",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Crane",
+      "candidate_name": "Ricardo Martínez García",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33811",
+      "offer_accepted_date": "2026-08-25",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Emerson Property Management",
+      "candidate_name": "Miguel M.",
+      "has_intro_video": "Yes",
+      "is_gtc": "Yes",
+      "hr_number": "33636",
+      "offer_accepted_date": "2026-08-05",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Emerson Property Management",
+      "candidate_name": "Ana B.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33627",
+      "offer_accepted_date": "2026-08-17",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Hepler Land Holdings",
+      "candidate_name": "Kiara Rodriguez",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33740",
+      "offer_accepted_date": "2026-08-28",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "customer_type": "Active Member",
+      "company_name": "Your Ohio Home buyer",
+      "candidate_name": "Mei Fu",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33644",
+      "offer_accepted_date": "2026-08-21",
+      "payment_terms": "full",
+      "stripe_invoice": "SW-8371",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Renewable Energy",
+      "customer_type": "Active Member",
+      "company_name": "Trevor Seelye",
+      "candidate_name": "Shanique Jhun",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33647",
+      "offer_accepted_date": "2026-08-17",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Residential",
+      "customer_type": "Active Member",
+      "company_name": "Austin Cleaning Crew",
+      "candidate_name": "Douglas M.",
+      "has_intro_video": "Yes",
+      "is_gtc": "Yes",
+      "hr_number": "33708",
+      "offer_accepted_date": "2026-08-24",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Andy R.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Elena V.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Janine E.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "31828",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Janine T.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "31828",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Krysthine L.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "31828",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "María J.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Natasha T.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32498",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Stephanie G.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-03",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Antonella C",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-25",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Louiji P.",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "31828",
+      "offer_accepted_date": "2026-08-25",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Sports",
+      "customer_type": "Active Member",
+      "company_name": "Soccer Shots Franchisees",
+      "candidate_name": "Pamela G",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "32199",
+      "offer_accepted_date": "2026-08-25",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Transportation",
+      "customer_type": "Active Member",
+      "company_name": "Buckled In",
+      "candidate_name": "Samuel Munoz",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33588",
+      "offer_accepted_date": "2026-08-07",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Transportation",
+      "customer_type": "Active Member",
+      "company_name": "Buckled In",
+      "candidate_name": "Beryl Mutheu",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33777",
+      "offer_accepted_date": "2026-08-27",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Trucking",
+      "customer_type": "Active Member",
+      "company_name": "Fulcrum",
+      "candidate_name": "Luis M",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33709",
+      "offer_accepted_date": "2026-08-17",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "Venture Capital",
+      "customer_type": "Active Member",
+      "company_name": "Centennial Investment Partners",
+      "candidate_name": "Sarely Chavarria",
+      "has_intro_video": "Yes",
+      "is_gtc": "No",
+      "hr_number": "33720",
+      "offer_accepted_date": "2026-08-21",
+      "payment_terms": "",
+      "stripe_invoice": "",
+      "source_short": "CORE"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Carlos Montanez",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8384",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Eduardo Antonio Icaza Steuber",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8486",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Jesus Borbon",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8201",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Joseph Fule",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8369",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Luana Johnson",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "installment",
+      "stripe_invoice": "SW-8438",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Marlon Mendoza",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8445",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Martin Zuniga",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8484",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Natalia Mariona Estrada",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8436",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Nicolás Ramírez Gómez",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8455",
+      "source_short": "Stripe WG"
+    },
+    {
+      "industry_primary": "",
+      "customer_type": "White Glove",
+      "company_name": "",
+      "candidate_name": "Rene Tanisha Coleman",
+      "has_intro_video": "No",
+      "is_gtc": "",
+      "hr_number": "",
+      "offer_accepted_date": "",
+      "payment_terms": "full WG",
+      "stripe_invoice": "SW-8331",
+      "source_short": "Stripe WG"
+    }
+  ],
+  "ai_builds": [
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Cleaning Services",
+      "company_name": "ServiceMaster by Haven Restoration Group",
+      "build_name": "Account Receivables Tracker",
+      "member_customer": "Sachin Bettadapur",
+      "project_code": "PRJ-076",
+      "created_at": "2026-08-01"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Healthcare",
+      "company_name": "Docs Dermatology Group",
+      "build_name": "Candidate Screening Agent",
+      "member_customer": "Allison Moser",
+      "project_code": "PRJ-077",
+      "created_at": "2026-08-04"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Gardening",
+      "company_name": "Floral Express",
+      "build_name": "Cruise Flower Delivery CS Response Automation",
+      "member_customer": "Peter Flores",
+      "project_code": "PRJ-078",
+      "created_at": "2026-08-07"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Real Estate",
+      "company_name": "Rental Home Advocate - So. Calif",
+      "build_name": "Lease Renewal Assistance Agent",
+      "member_customer": "Brian Bean - CRANE",
+      "project_code": "PRJ-079",
+      "created_at": "2026-08-07"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Archived",
+      "industry_primary": "",
+      "company_name": "Happy Homes",
+      "build_name": "Automated 90 KPI Dashboard",
+      "member_customer": "Bill",
+      "project_code": "PRJ-080",
+      "created_at": "2026-08-12"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "",
+      "company_name": "Monterey Rentals",
+      "build_name": "Rent Benchmarking Agent",
+      "member_customer": "Jan Leasure",
+      "project_code": "PRJ-081",
+      "created_at": "2026-08-13"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Archived",
+      "industry_primary": "",
+      "company_name": "",
+      "build_name": "ACR handover note verification 2026-08-17 2220 UTC",
+      "member_customer": "",
+      "project_code": "PRJ-082",
+      "created_at": "2026-08-17"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Archived",
+      "industry_primary": "",
+      "company_name": "Monterey Rentals",
+      "build_name": "Rental Pricing Agent",
+      "member_customer": "Jan Leasure",
+      "project_code": "PRJ-083",
+      "created_at": "2026-08-20"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Archived",
+      "industry_primary": "",
+      "company_name": "Happy Homes Property Managers",
+      "build_name": "EOS Scorecard Agent",
+      "member_customer": "Bill Davy",
+      "project_code": "PRJ-084",
+      "created_at": "2026-08-20"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "",
+      "company_name": "Red Fortress",
+      "build_name": "Property Inspection Agent",
+      "member_customer": "Michael McVety",
+      "project_code": "PRJ-085",
+      "created_at": "2026-08-20"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Digital",
+      "company_name": "Freitag Marketing",
+      "build_name": "Client Approval Agent",
+      "member_customer": "Jan Ziegler",
+      "project_code": "PRJ-086",
+      "created_at": "2026-08-20"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Real Estate & Property",
+      "company_name": "My Beach Rentals",
+      "build_name": "Rental Performance Dashboard",
+      "member_customer": "Declan M",
+      "project_code": "PRJ-087",
+      "created_at": "2026-08-20"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "Financial Services",
+      "company_name": "Bison CFO",
+      "build_name": "Timesheet Agent",
+      "member_customer": "Kurtis Hanni",
+      "project_code": "PRJ-088",
+      "created_at": "2026-08-24"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Archived",
+      "industry_primary": "",
+      "company_name": "GL Hunt",
+      "build_name": "Engineering Report Agent",
+      "member_customer": "Hayden",
+      "project_code": "PRJ-089",
+      "created_at": "2026-08-25"
+    },
+    {
+      "include_in_customer_count": "No",
+      "exclude_reason": "Internal/test build",
+      "industry_primary": "",
+      "company_name": "Sagan AI - test",
+      "build_name": "Credential Pilot",
+      "member_customer": "Huz Test",
+      "project_code": "PRJ-090",
+      "created_at": "2026-08-27"
+    },
+    {
+      "include_in_customer_count": "Yes",
+      "exclude_reason": "",
+      "industry_primary": "",
+      "company_name": "Coyote PMC",
+      "build_name": "Property Update Summarizer",
+      "member_customer": "Skyler Walker",
+      "project_code": "PRJ-091",
+      "created_at": "2026-08-27"
+    }
+  ],
+  "gpd": [
+    {
+      "industry_primary": "(industry not tagged)",
+      "august_member_hires": "0",
+      "august_white_glove_hires": "10",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Accounting",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Cleaning Services",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Commercial Real Estate",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Construction",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Construction & Engineering",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Consumer Services",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "august_member_hires": "9",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Equipment",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Financial Services",
+      "august_member_hires": "3",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Fitness",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Food & Beverage",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Food & Hospitality",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "HVAC",
+      "august_member_hires": "4",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "august_member_hires": "5",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Home Improvement",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Home Services",
+      "august_member_hires": "3",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Home Services & Trades",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "IT Services",
+      "august_member_hires": "2",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "august_member_hires": "4",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Marketing",
+      "august_member_hires": "2",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Mental Healthcare",
+      "august_member_hires": "2",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Personal Care",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "august_member_hires": "4",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Professional Services",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "august_member_hires": "8",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Renewable Energy",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Residential",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Sports",
+      "august_member_hires": "11",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Transportation",
+      "august_member_hires": "2",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Trucking",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    },
+    {
+      "industry_primary": "Venture Capital",
+      "august_member_hires": "1",
+      "august_white_glove_hires": "0",
+      "new_hires_enrolled_in_gpd_in_august": "0"
+    }
+  ],
+  "installments": [
+    {
+      "industry_primary": "(industry not tagged)",
+      "august_hires": "10",
+      "installment_or_deferred_verified": "1",
+      "paid_in_full_stripe_verified": "9",
+      "payment_terms_unknown": "0"
+    },
+    {
+      "industry_primary": "Accounting",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Cleaning Services",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Commercial Real Estate",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Construction",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "0"
+    },
+    {
+      "industry_primary": "Construction & Engineering",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Consumer Services",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Environmental Services",
+      "august_hires": "9",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "9"
+    },
+    {
+      "industry_primary": "Equipment",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Financial Services",
+      "august_hires": "3",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "3"
+    },
+    {
+      "industry_primary": "Fitness",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Food & Beverage",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Food & Hospitality",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "HVAC",
+      "august_hires": "4",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "4"
+    },
+    {
+      "industry_primary": "Healthcare",
+      "august_hires": "5",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "4"
+    },
+    {
+      "industry_primary": "Home Improvement",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Home Services",
+      "august_hires": "3",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "3"
+    },
+    {
+      "industry_primary": "Home Services & Trades",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "0"
+    },
+    {
+      "industry_primary": "IT Services",
+      "august_hires": "2",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "2"
+    },
+    {
+      "industry_primary": "Landscaping",
+      "august_hires": "4",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "4"
+    },
+    {
+      "industry_primary": "Marketing",
+      "august_hires": "2",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "2"
+    },
+    {
+      "industry_primary": "Mental Healthcare",
+      "august_hires": "2",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "2"
+    },
+    {
+      "industry_primary": "Personal Care",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "0"
+    },
+    {
+      "industry_primary": "Plumbing",
+      "august_hires": "4",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "4"
+    },
+    {
+      "industry_primary": "Professional Services",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "0"
+    },
+    {
+      "industry_primary": "Real Estate",
+      "august_hires": "8",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "1",
+      "payment_terms_unknown": "7"
+    },
+    {
+      "industry_primary": "Renewable Energy",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Residential",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Sports",
+      "august_hires": "11",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "11"
+    },
+    {
+      "industry_primary": "Transportation",
+      "august_hires": "2",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "2"
+    },
+    {
+      "industry_primary": "Trucking",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    },
+    {
+      "industry_primary": "Venture Capital",
+      "august_hires": "1",
+      "installment_or_deferred_verified": "0",
+      "paid_in_full_stripe_verified": "0",
+      "payment_terms_unknown": "1"
+    }
+  ]
+}
+
