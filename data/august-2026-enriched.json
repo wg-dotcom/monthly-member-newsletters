@@ -74,7 +74,13 @@
       "payment_terms": "full",
       "stripe_invoice": "SW-8239",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Viridiana T.",
+      "role_title": "Scheduling Coordinator - Residential Estimating",
+      "video_url": "https://candidate-video.com/uploads/308a2a46-0b62-49f8-aead-330956067e0d"
     },
     {
       "industry_primary": "Construction & Engineering",
@@ -108,7 +114,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Monica Cornejo Sernaque",
+      "role_title": "Office Manager",
+      "video_url": "https://candidate-video.com/uploads/b37bf656-a041-4e7d-840d-594c7532b339"
     },
     {
       "industry_primary": "Environmental Services",
@@ -122,7 +134,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Carlos V.",
+      "role_title": "Regional Sourcing Associate",
+      "video_url": "https://drive.google.com/file/d/1Opc_-bbzsHyhz81vj1kK6kX4lzNgkk9r/view?usp=drive_link"
     },
     {
       "industry_primary": "Environmental Services",
@@ -150,7 +168,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Andrea M.",
+      "role_title": "Training Content Specialist",
+      "video_url": "https://drive.google.com/file/d/14ce-u_-qabLiLy0KeT0bHYlpKcjnluW6/view?usp=drive_link"
     },
     {
       "industry_primary": "Environmental Services",
@@ -164,7 +188,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Jose Z.",
+      "role_title": "Regional Sourcing Associate",
+      "video_url": "https://drive.google.com/file/d/1bUwIrXyASuLYunRLYa0kAI5XJ_4JfxFG/view?usp=drive_link"
     },
     {
       "industry_primary": "Environmental Services",
@@ -178,7 +208,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Samuel G.",
+      "role_title": "Key Account Analyst",
+      "video_url": "https://drive.google.com/file/d/19MypRuyIcNgpUxy7fFZJCv4lI_v1eCCh/view?usp=drive_link"
     },
     {
       "industry_primary": "Environmental Services",
@@ -346,7 +382,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Joaquin E.",
+      "role_title": "Night Dispatch & Logistics Coordinator",
+      "video_url": "https://candidate-video.com/uploads/96fa2d8f-c923-44d2-90ee-a94627fcb9e8"
     },
     {
       "industry_primary": "Food & Beverage",
@@ -450,7 +492,13 @@
       "payment_terms": "full",
       "stripe_invoice": "SW-8284",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Jovanne Z.",
+      "role_title": "Technical Support Specialist",
+      "video_url": "https://drive.google.com/file/d/1bghLpCmJUlI4TI-ek3Z1Fx2R-KGooAK7/view"
     },
     {
       "industry_primary": "Healthcare",
@@ -464,7 +512,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Arleth Carbaja",
+      "role_title": "Medical Administrative Assistant",
+      "video_url": "https://drive.google.com/file/d/1peMfemdNP6oQrDHDYLa4fKkmAz3Kj62y/view?usp=drive_link"
     },
     {
       "industry_primary": "Healthcare",
@@ -594,7 +648,13 @@
       "payment_terms": "full",
       "stripe_invoice": "SW-8250",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Alanna V.",
+      "role_title": "Customer Success",
+      "video_url": "https://drive.google.com/file/d/1CDBlFd7WvxymqNZGFUDEbvt_yUftIxdw/view?usp=sharing"
     },
     {
       "industry_primary": "IT Services",
@@ -642,7 +702,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Natalia E.",
+      "role_title": "Service Coordinator & Dispatcher",
+      "video_url": "https://drive.google.com/file/d/1b2GSDmK_9j6viPnmt1d_luwSQtl5Zh-V/view?usp=drive_link"
     },
     {
       "industry_primary": "Landscaping",
@@ -778,7 +844,13 @@
       "payment_terms": "full",
       "stripe_invoice": "SW-8299",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Fernanda P.",
+      "role_title": "Executive & Operations Coordinator",
+      "video_url": "https://drive.google.com/file/d/1x1lEglF_IDdAKTy27Jf7Z7Mz1wUJvmFJ/view?usp=sharing"
     },
     {
       "industry_primary": "Plumbing",
@@ -942,7 +1014,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Miguel M.",
+      "role_title": "Project Coordinator",
+      "video_url": "https://drive.google.com/file/d/1EuKRzqqBujNv_4N1aELLhWolRtUyGuUT/view?usp=drive_link"
     },
     {
       "industry_primary": "Real Estate",
@@ -956,7 +1034,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unresolved"
+      "candidate_profile_match": "verified_source_override",
+      "department": "",
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Ana B.",
+      "role_title": "Leasing Specialist",
+      "video_url": "https://ta-dashboard-supabase.replit.app/api/screening-candidates/rec2bgISxXgaiZADS/video-intro"
     },
     {
       "industry_primary": "Real Estate",
@@ -1024,13 +1108,13 @@
       "payment_terms": "",
       "stripe_invoice": "",
       "source_short": "CORE",
-      "candidate_profile_match": "unique_first_last_initial",
-      "candidate_profile_name": "DOUGLAS DE CASTRO MARTINS",
-      "role_title": "Purchasing Assistant",
+      "candidate_profile_match": "verified_source_override",
       "department": "",
-      "country": "BRAZIL",
-      "monthly_rate": "2000",
-      "video_url": ""
+      "country": "",
+      "monthly_rate": "",
+      "candidate_profile_name": "Douglas M.",
+      "role_title": "Sales Development Representative",
+      "video_url": "https://drive.google.com/file/d/123KY5P_DAuzhvNqjkTiwioUm89_eZ6sI/view?usp=drive_link"
     },
     {
       "industry_primary": "Sports",
@@ -1981,8 +2065,8 @@
   ],
   "enrichment": {
     "active_member_hires": 77,
-    "candidate_profiles_matched": 30,
-    "matched_profiles_with_video_url": 24,
-    "method": "Exact or unique conservative name matching against the local candidate mirror. Unresolved records stay unresolved."
+    "candidate_profiles_matched": 44,
+    "matched_profiles_with_video_url": 39,
+    "method": "Verified CORE/GTC/presentation links first, then exact or unique conservative name matching against the local candidate mirror. Unresolved records stay unresolved."
   }
 }

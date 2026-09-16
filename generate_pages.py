@@ -222,16 +222,16 @@ def render_candidate(hire: dict) -> str:
     if hire.get("has_intro_video") == "Yes" and video_url:
         video = f'<a class="video-link" href="{esc(video_url)}" target="_blank" rel="noopener noreferrer">Watch intro <span aria-hidden="true">↗</span></a>'
     elif hire.get("has_intro_video") == "Yes":
-        video = '<span class="video-ready">Intro video available</span>'
+        video = ""
     else:
         video = ""
+    video_line = f"\n  {video}" if video else ""
     return f"""<article class="candidate-card">
   <div class="avatar" aria-hidden="true">{esc(name[0])}</div>
   <div class="candidate-copy">
     <div class="candidate-title"><h4>{esc(name)}</h4>{gtc}</div>
     <p>{esc(role)}</p>
-  </div>
-  {video}
+  </div>{video_line}
 </article>"""
 
 
