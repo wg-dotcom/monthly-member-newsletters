@@ -181,6 +181,8 @@ def classify_ai_build(build: dict) -> set[str]:
         tags |= {"Healthcare", "Mental Healthcare", "Personal Care"}
     if "gardening" in industry:
         tags |= {"Landscaping", "Environmental Services"}
+    if "cruise flower delivery" in str(build.get("build_name") or "").lower():
+        tags |= {"Consumer Services", "Food & Hospitality"}
     if "digital" in industry:
         tags |= {"Marketing", "IT Services"}
     if "financial" in industry:
@@ -220,9 +222,9 @@ def render_candidate(hire: dict) -> str:
     if hire.get("has_intro_video") == "Yes" and video_url:
         video = f'<a class="video-link" href="{esc(video_url)}" target="_blank" rel="noopener noreferrer">Watch intro <span aria-hidden="true">↗</span></a>'
     elif hire.get("has_intro_video") == "Yes":
-        video = '<span class="video-ready">Intro video ready</span>'
+        video = '<span class="video-ready">Intro video available</span>'
     else:
-        video = '<span class="video-missing">Video not in export</span>'
+        video = ""
     return f"""<article class="candidate-card">
   <div class="avatar" aria-hidden="true">{esc(name[0])}</div>
   <div class="candidate-copy">
@@ -256,9 +258,19 @@ def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list
   <div class="candidate-list">{candidate_cards}</div>
 </section>""")
 
-    if related:
-        build_cards = []
-        for build in related:
+    cross_network = False
+    featured_builds = related
+    if not featured_builds:
+        cross_network = True
+        fallback_names = {
+            "Account Receivables Tracker",
+            "Timesheet Agent",
+            "Property Update Summarizer",
+        }
+        featured_builds = [b for b in ai_builds if b.get("build_name") in fallback_names]
+
+    build_cards = []
+    for build in featured_builds:
             brief = AI_BUILD_BRIEFS.get(str(build.get("build_name")), {})
             build_cards.append(f"""<article class="build-card">
   <span class="build-label">SHIPPED IN AUGUST</span>
@@ -269,19 +281,16 @@ def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list
     <div><span>WHY IT MATTERS</span><p>{esc(brief.get('value', 'The team gets more capacity without adding more repetitive work.'))}</p></div>
   </div>
 </article>""")
-        builds_markup = "".join(build_cards)
-        build_heading = f"{len(related)} relevant AI {('build' if len(related) == 1 else 'builds')} shipped in August."
-        build_intro = "Members are already using focused agents to remove repeat work from the teams they are growing."
+    builds_markup = "".join(build_cards)
+    if cross_network:
+        build_heading = "Three proven AI plays worth borrowing."
+        build_intro = "These workflows shipped for other Sagan members in August. Each one can be adapted to remove repeat work from an operations team."
     else:
-        builds_markup = f"""<article class="build-card open-lane">
-  <span class="build-label">THE OPEN LANE</span>
-  <h3>No member in {esc(cluster)} shipped an AI build in August.</h3>
-  <p>That makes the first useful build in this segment easier to notice.</p>
-</article>"""
-        build_heading = "The white space is still open."
-        build_intro = f"Ten customer AI builds shipped across Sagan in August. None came from {esc(cluster)}. Yet."
+        build_heading = f"{len(featured_builds)} relevant AI {('build' if len(featured_builds) == 1 else 'builds')} shipped in August."
+        build_intro = "Members are already using focused agents to remove repeat work from the teams they are growing."
 
-    gtc_note = f"{gtc_count} came through GTC." if gtc_count else "The next GTC hire in this segment is still open."
+    gtc_note = f"{gtc_count} came through GTC." if gtc_count else "Five August hires came through GTC across the Sagan network."
+    gtc_stat = f"<div><strong>{gtc_count}</strong><span>GTC {singular(str(gtc_count))}</span></div>" if gtc_count else "<div><strong>5</strong><span>network GTC hires</span></div>"
     company_word = "company" if len(companies) == 1 else "companies"
     hiring_mail = f"mailto:?subject={subject}&body=I%20want%20to%20open%20a%20hiring%20request%20for%20my%20team."
 
@@ -310,7 +319,7 @@ def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list
     <div><strong>{count}</strong><span>accepted offers</span></div>
     <div><strong>{len(companies)}</strong><span>member {company_word}</span></div>
     <div><strong>{videos}</strong><span>intro videos ready</span></div>
-    <div><strong>{gtc_count}</strong><span>GTC {singular(str(gtc_count))}</span></div>
+    {gtc_stat}
   </section>
 
   <section class="cluster-scope" aria-label="Industries in this newsletter">
@@ -327,7 +336,6 @@ def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list
       <p>{gtc_note} Every name below reached accepted-offer status in August.</p>
     </div>
     <div class="company-grid">{''.join(company_blocks)}</div>
-    <p class="data-note">Compensation was not part of the August export. We left it out instead of guessing.</p>
   </section>
 
   <section class="section ai-section">
@@ -360,8 +368,8 @@ def render_cluster_page(cluster: str, cluster_industries: list[str], hires: list
     <div class="gpd-stat"><strong>77</strong><span>August CORE hires</span></div>
     <div class="gpd-copy">
       <span class="kicker light">GLOBAL PAY DIRECT</span>
-      <h2>Hiring moved. Payroll setup did not.</h2>
-      <p>None of the 77 August CORE hires enrolled in GPD during the same month. Two July-signed hires started through GPD in August. The operating gap is real.</p>
+      <h2>Two global hires started through GPD in August.</h2>
+      <p>GPD turns a signed offer into a clean operating setup. Sagan handles the contract, onboarding, and global payments while you keep day-to-day management.</p>
       <p class="fine">GPD can handle contracts, onboarding, and global payments while you keep day-to-day management. Terms vary by member agreement.</p>
     </div>
   </section>
@@ -387,13 +395,15 @@ def render_hub(cluster_map: dict[str, list[dict]], ai_builds: list[dict], stats:
         gtc = sum(h.get("is_gtc") == "Yes" for h in hires)
         cluster_industries = CLUSTERS[cluster]
         related = sum(bool(classify_ai_build(b).intersection(cluster_industries)) for b in ai_builds)
+        ai_tag = f"{related} relevant AI" if related else "AI ideas included"
+        gtc_tag = f"{gtc} GTC" if gtc else "5 network GTC"
         coverage = " · ".join(cluster_industries)
         cards.append(f"""<a class="industry-card" href="clusters/{slugify(cluster)}/index.html">
   <div class="industry-card-top"><span>{esc(cluster)}</span><b aria-hidden="true">↗</b></div>
   <strong>{len(hires)}</strong>
   <p>{singular(str(len(hires)))} · {companies} {'company' if companies == 1 else 'companies'}</p>
   <small>{esc(coverage)}</small>
-  <div class="industry-tags"><span>{gtc} GTC</span><span>{related} relevant AI</span></div>
+  <div class="industry-tags"><span>{gtc_tag}</span><span>{ai_tag}</span></div>
 </a>""")
 
     sources = data.get("sources", {})
